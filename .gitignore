@@ -1,0 +1,11 @@
+node_modules
+dist
+.env
+.env.local
+*.local
+
+# Local SQLite/libSQL dev database files
+server/data/*.db
+server/data/*.db-*
+local-dev.db
+local-dev.db-*
