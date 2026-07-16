@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './styles.css';
 
 // Dev talks to the local Express server; production build calls the same-origin
@@ -1286,4 +1287,9 @@ function BulkImportModal({ type, onClose, onImported }) {
   );
 }
 
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById('root')).render(
+  <>
+    <App />
+    <SpeedInsights />
+  </>
+);
